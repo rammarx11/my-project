@@ -21,8 +21,10 @@ pipeline {
         }
         stage('Deploy on Kubernetes') {
             steps {
-                sh 'kubectl apply -f /var/lib/jenkins/workspace/kuber/pod.yaml'
-                sh 'kubectl rollout restart deployment loadbalancer-pod'
+                sh 'sudo helm lint /var/lib/jenkins/workspace/project/hello-world'
+                sh 'sudo helm install /var/lib/jenkins/workspace/project/hello-world/ --dry-run --generate-name'
+                sh 'sudo helm install /var/lib/jenkins/workspace/project/hello-world/ --generate-name'
+                
             }
         }
     }
