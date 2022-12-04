@@ -1,6 +1,6 @@
 appserver:
   name: hello
-  replicas: 3
+  replicas: 1
  
   service:
     name: app-server-clusterip-service
