@@ -6,6 +6,6 @@ appserver:
     name: app-server-clusterip-service
     type: LoadBalancer
   image:
-    name: rammarx/myproject
+    name: rammarx/test
     tag: latest
 
