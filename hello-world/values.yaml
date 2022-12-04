@@ -1,0 +1,11 @@
+appserver:
+  name: hello
+  replicas: 3
+ 
+  service:
+    name: app-server-clusterip-service
+    type: LoadBalancer
+  image:
+    name: rammarx/myproject
+    tag: latest
+
