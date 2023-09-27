@@ -24,7 +24,7 @@ pipeline {
                 sh 'sudo helm lint /var/lib/jenkins/workspace/project/hello-world'
                 sh 'sudo kubectl rollout restart deployment loadbalancer-pod'
                 sh 'sudo helm install /var/lib/jenkins/workspace/project/hello-world/ --dry-run --generate-name'
-                sh 'sudo helm install /var/lib/jenkins/workspace/project/hello-world/ --generate-name'////
+                sh 'sudo helm install /var/lib/jenkins/workspace/project/hello-world/ --generate-name'
                 
                 
             }
